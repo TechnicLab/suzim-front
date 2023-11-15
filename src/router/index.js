@@ -5,6 +5,11 @@ import OrderView from "../views/OrderView.vue";
 import TrackingView from "../views/TrackingView.vue";
 import CustomersView from "../views/CustomersView.vue";
 import CustomerView from "../views/CustomerView.vue";
+import PaymentsView from "../views/PaymentsView.vue";
+import PaymentNew from "../components/PaymentNew.vue";
+import PaymentView from "../views/PaymentView.vue";
+import ProductsView from "../views/ProductsView.vue";
+import ProductView from "../views/ProductView.vue";
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
@@ -38,6 +43,26 @@ const router = createRouter({
             path: '/customer/:customerId/',
             name: 'customer',
             component: CustomerView
+        },
+        {
+            path: '/payments/',
+            name: 'payments',
+            component: PaymentsView
+        },
+        {
+            path: '/payment/:paymentId/',
+            name: 'payment',
+            component: PaymentView
+        },
+        {
+            path: '/products/',
+            name: 'products',
+            component: ProductsView
+        },
+        {
+            path: '/product/:productId/',
+            name: 'product',
+            component: ProductView
         },
         {
             path: '/about',

@@ -9,8 +9,8 @@
         <b-navbar-nav>
           <b-nav-item :to="{name: 'orders'}">Orders</b-nav-item>
           <b-nav-item :to="{name: 'customers'}">Customers</b-nav-item>
-          <b-nav-item href="#">Payment Methods</b-nav-item>
-          <b-nav-item href="#">Products</b-nav-item>
+          <b-nav-item :to="{name: 'payments'}">Payment Methods</b-nav-item>
+          <b-nav-item :to="{name: 'products'}">Products</b-nav-item>
           <b-nav-item href="#">Employees</b-nav-item>
         </b-navbar-nav>
 

@@ -111,7 +111,6 @@ export default {
     },
     openEdit(data) {
       this.edited_customer.item = data.item
-      console.log(this.edited_customer.item.id)
       this.edited_customer.index = data.index
       this.$bvModal.show('edit-customer')
     },
