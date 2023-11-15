@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import OrdersView from "../views/OrdersView.vue";
 import OrderView from "../views/OrderView.vue";
 import TrackingView from "../views/TrackingView.vue";
+import CustomersView from "../views/CustomersView.vue";
+import CustomerView from "../views/CustomerView.vue";
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
@@ -26,6 +28,16 @@ const router = createRouter({
             path: '/tracking/:orderId?/',
             name: 'tracking',
             component: TrackingView
+        },
+        {
+            path: '/customers/',
+            name: 'customers',
+            component: CustomersView
+        },
+        {
+            path: '/customer/:customerId/',
+            name: 'customer',
+            component: CustomerView
         },
         {
             path: '/about',

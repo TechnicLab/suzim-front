@@ -23,7 +23,7 @@
           </b-collapse>
         </div>
 
-        <OrdersBar
+        <Controlbar
             @on-click='this.$bvModal.show("new-order")'/>
 
         <OrdersTable
@@ -41,7 +41,7 @@
           </b-container>
           <template #modal-footer>
             <b-button variant="danger" @click="$bvModal.hide('new-order')">Discard</b-button>
-            <b-button variant="outline-primary" @click="createOrder()">Save</b-button>
+            <b-button variant="outline-info" @click="createOrder()">Save</b-button>
           </template>
         </b-modal>
 
@@ -54,7 +54,7 @@
           </b-container>
           <template #modal-footer>
             <b-button variant="danger" @click="$bvModal.hide('edit-order')">Discard</b-button>
-            <b-button variant="outline-primary" @click="changeOrder()">Save</b-button>
+            <b-button variant="outline-info" @click="changeOrder()">Save</b-button>
           </template>
         </b-modal>
 
@@ -66,13 +66,13 @@
 <script>
 import OrdersTable from "@/components/OrdersTable.vue";
 import Sidebar from "../components/layout/Sidebar.vue";
-import OrdersBar from "../components/OrdersBar.vue";
 import axios from "axios";
 import OrderNew from "../components/OrderNew.vue";
+import Controlbar from "../components/layout/Controlbar.vue";
 
 export default {
   name: "OrdersView",
-  components: {OrderNew, OrdersBar, Sidebar, OrdersTable},
+  components: {OrderNew, Controlbar, Sidebar, OrdersTable},
   data() {
     return {
       orders: [],
